@@ -53,7 +53,9 @@
 	</style>
   </head>
   <body>
-
+	<main>
+	
+	{% block content %}
 	<div class="topnav">
   		<a class="active" href="#home">TicketMe</a>
   		<a href="#concerts">Concerts</a>
@@ -64,9 +66,6 @@
     		<a href="../accounts/login">Login</a>
   		</div>
 	</div>
-
-	<main>
-	{% block content %}
 	{% endblock %}
 	</main>
 

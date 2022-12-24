@@ -13,7 +13,14 @@
         <a href="#sports">Sports</a>
         <a href="#theatre">Theatre Arts</a>
         <div class="topnav-right">
-            <a href="{% url 'logout' %}">Logout</a>
+            <div class="dropdown">
+				<button class="dropbtn"> Account </button>
+				<div class="dropdown-content">
+					<a href="#"> Tickets </a>
+					<a href="#"> Settings </a>
+				</div>
+			</div>
+			<a href="{% url 'logout' %}">Logout</a>
         </div>
     </div>
 

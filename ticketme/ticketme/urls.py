@@ -19,11 +19,15 @@ from django.urls import include
 from django.views.generic  import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+from tickets import views as tickets_views
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
 	path("tickets/", include('tickets.urls')),
 	path("accounts/", include("django.contrib.auth.urls")), # Including auth app
+	path('register/', tickets_views.register, name='register'),
 	path('', RedirectView.as_view(url='tickets/')),
 ] + static(settings.STATIC_URL,
 document_root=settings.STATIC_ROOT)
